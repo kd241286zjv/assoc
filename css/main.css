@@ -1,30 +1,30 @@
 @font-face {
   font-family: 'museo';
-  src: url('museosansblack-webfont.eot');
-  src: url('museosansblack-webfont.eot?#iefix') format('embedded-opentype'),
-       url('museosansblack-webfont.woff2') format('woff2'),
-       url('museosansblack-webfont.woff') format('woff'),
-       url('museosansblack-webfont.svg#museo_sans_cyrl900') format('svg');
+  src: url('fonts/museosansblack-webfont.eot');
+  src: url('fonts/museosansblack-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/museosansblack-webfont.woff2') format('woff2'),
+       url('fonts/museosansblack-webfont.woff') format('woff'),
+       url('fonts/museosansblack-webfont.svg#museo_sans_cyrl900') format('svg');
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: 'museo';
-  src: url('museosansbold-webfont.eot');
-  src: url('museosansbold-webfont.eot?#iefix') format('embedded-opentype'),
-       url('museosansbold-webfont.woff2') format('woff2'),
-       url('museosansbold-webfont.woff') format('woff'),
-       url('museosansbold-webfont.svg#museo_sans_cyrl700') format('svg');
+  src: url('fonts/museosansbold-webfont.eot');
+  src: url('fonts/museosansbold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/museosansbold-webfont.woff2') format('woff2'),
+       url('fonts/museosansbold-webfont.woff') format('woff'),
+       url('fonts/museosansbold-webfont.svg#museo_sans_cyrl700') format('svg');
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: 'museo';
-  src: url('museosansregular-webfont.eot');
-  src: url('museosansregular-webfont.eot?#iefix') format('embedded-opentype'),
-       url('museosansregular-webfont.woff2') format('woff2'),
-       url('museosansregular-webfont.woff') format('woff'),
-       url('museosansregular-webfont.svg#museo_sans_cyrl300') format('svg');
+  src: url('fonts/museosansregular-webfont.eot');
+  src: url('fonts/museosansregular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/museosansregular-webfont.woff2') format('woff2'),
+       url('fonts/museosansregular-webfont.woff') format('woff'),
+       url('fonts/museosansregular-webfont.svg#museo_sans_cyrl300') format('svg');
   font-weight: 300;
   font-style: normal;
 }
@@ -247,22 +247,24 @@ nav ul{
 }
 nav ul li{
   width: calc(100% / 6);
-  height: 90px;
   border: 1px solid #fff;
   background-color: rgba(0,0,0,.25);
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-  position: relative;
-  justify-content: center;
-  -ms-align-items: center;
-  align-items: center;
   border-left: none;
   cursor: pointer;
+  position: relative;
   text-transform: uppercase;
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
+}
+nav ul li a{
+  height: 90px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
 }
 nav ul li svg{
   width: 10px;
@@ -283,6 +285,23 @@ nav ul li:hover{
 }
 nav ul li ul{
   display: none;
+  position: absolute;
+  width: 100%;
+  top: 88px;
+}
+nav ul li ul li{
+  width: 100%;
+  border-left: 1px solid #fff;
+  background-color: #fff;
+}
+nav ul li ul li a{
+  color: #1a1a1a;
+  -webkit-transition: .3s color ease;
+  -o-transition: .3s color ease;
+  transition: .3s color ease;
+}
+nav ul li ul li a:hover{
+  color: #2c81c2;
 }
 .mainSlide{
   position: relative;
@@ -531,9 +550,6 @@ nav ul li ul{
 .infoBlock{
   position: relative;
 }
-.infoBlock:first-child{
-  width: 270px;
-}
 .infoBlock__img{
   width: 100%;
   height: 100%;
@@ -550,9 +566,6 @@ nav ul li ul{
   font-weight: 900;
   margin-bottom: 10px;
 }
-.infoBlock:last-child{
-  width: 370px;
-}
 .infoBlock:nth-child(2){
   display: -webkit-flex;
   display: -ms-flex;
@@ -560,8 +573,7 @@ nav ul li ul{
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  width: 455px;
-  justify-content: space-around;
+  justify-content: space-between;
   align-content:space-between;
 }
 .infoBlock__subBlock{
@@ -578,7 +590,7 @@ nav ul li ul{
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
-  width: 270px;
+  width: 60%;
   justify-content: center;
   -ms-align-items: center;
   align-items: center;
@@ -594,7 +606,7 @@ nav ul li ul{
   height: 30px;
 }
 .infoBlock:nth-child(2) .infoBlock__subBlock:nth-child(2), .infoBlock:nth-child(2) .infoBlock__subBlock:nth-child(3){
-  width: 170px;
+  width: 33%;
 }
 .infoBlock__subBlock .infoBlock__caption{
   top: auto;
@@ -679,4 +691,521 @@ ul.footerMenuList li a:hover{
 }
 .swiper-button-next, .swiper-button-prev{
   height: 24px;
+}
+nav ul li:hover ul{
+  display: block;
+}
+iframe{
+  width: 100%;
+}
+.hamburger{
+  display: none;
+}
+
+@media(max-width: 1400px){
+  .companyDocs__link{
+    margin: 0 5px;
+  }
+}
+@media(max-width: 1300px){
+  .headerTop{
+    padding: 20px;
+  }
+  .headerName__name{
+    font-size: 12px;
+  }
+  .companyDocs__link{
+    font-size: 12px;
+  }
+}
+@media(max-width: 1199px){
+  .news{
+    margin-top: 40px;
+  }
+  .newsItem__text{
+    min-height: 48px;
+    max-height: 48px;
+  }
+  .infoBlock:first-child{
+    width: 33%;
+  }
+  .slideCaption{
+    max-width: 800px;
+  }
+  .infoBlocks{
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .infoBlock:nth-child(2){
+    order:3;
+    margin-top: 20px;
+  }
+  .infoBlocks{
+    height: auto;
+  }
+  .infoBlock:nth-child(2) .infoBlock__subBlock:first-child, .infoBlock:nth-child(2) .infoBlock__subBlock:last-child{
+    margin-bottom: 10px;
+  }
+  .footerPhone{
+    font-size: 20px;
+  }
+  .companyDocs{
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: #454545;
+  }
+  .headerTop{
+    top: 40px;
+  }
+  .headerBottom{
+    top: 110px;
+  }
+  nav ul li{
+    font-size: 10px;
+    height: 65px;
+  }
+  .logos{
+    min-width: 130px;
+    width: 130px;
+    height: 65px;
+  }
+  nav ul li ul{
+    top: 65px;
+  }
+}
+@media(max-width: 991px){
+  .companyDocs__link{
+    margin: 0 10px;
+  }
+  .callbackButton{
+    font-size: 12px;
+  }
+  .headerName__name{
+    font-size: 10px;
+  }
+  .slideCaption{
+    max-width: 500px;
+  }
+  .mainSlide__header{
+    font-size: 35px;
+  }
+  .advantage{
+    width: calc(100% / 3);
+  }
+  footer h4{
+    font-size: 16px;
+  }
+  .footerPhone{
+    font-size: 14px;
+  }
+  .hamburger{
+    display: block;
+  }
+  nav{
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 65px;
+  }
+  .headerBottom{
+    justify-content: space-between;
+  }
+  .hamburger-inner, .hamburger-inner::after, .hamburger-inner::before, .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::after, .hamburger.is-active .hamburger-inner::before{
+    background-color: #fff;
+  }
+  nav ul{
+    width: 100%;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  nav ul li{
+    width: 100%;
+    border: none;
+  }
+  nav ul li ul{
+    position: relative;
+  }
+  nav ul li{
+    height: auto;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  nav ul li svg{
+    display: none;
+  }
+  nav ul li ul{
+    display: block;
+    position: static;
+  }
+  nav ul li a{
+    height: 50px;
+    font-size: 16px;
+  }
+  nav ul li{
+    background-color: rgba(0,0,0,.9);
+  }
+  nav ul li ul li{
+    background-color: transparent;
+  }
+  nav ul li ul li a{
+    color: #fff;
+  }
+  nav ul li ul li a{
+    font-size: 12px;
+    height: 30px;
+  }
+}
+@media(max-width: 767px){
+  .signBlock__signUp{
+    margin-right: 10px;
+  }
+  .signBlock__signUp::after{
+    right: -6px;
+  }
+  .headerName__name{
+    max-width: 180px;
+    text-align: right;
+  }
+  .headerTop{
+    padding: 10px;
+  }
+  .headerBottom{
+    top: 90px;
+  }
+  .slideCaption{
+    max-width: 550px;
+  }
+  .mainSlide__header{
+    font-size: 25px;
+  }
+  .mainSlide__subheader{
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .mainSlide__description{
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+  .mainSlide__button{
+    height: 50px;
+  }
+  .companyDocs{
+    height: 30px;
+    top: -30px;
+  }
+  .headerTop{
+    top: 30px;
+  }
+  .headerBottom{
+    top: 80px;
+  }
+  .logos{
+    height: 40px;
+    min-width: 80px;
+    width: 80px;
+  }
+  .hamburger-inner, .hamburger-inner::after, .hamburger-inner::before{
+    width: 34px;
+    height: 3px;
+  }
+  .hamburger-inner::before{
+    top: -8px;
+  }
+  .hamburger--collapse .hamburger-inner::after{
+    top: -16px;
+  }
+  .hamburger-box{
+    width: 34px;
+    height: 20px;
+  }
+  .slideCaption{
+    padding-top: 100px;
+  }
+  .mainSlide__header br{
+    display: none;
+  }
+  .mainSlide__header{
+    font-size: 24px;
+  }
+  .advantage{
+    height: 220px;
+  }
+  .newsSection{
+    padding: 50px 0;
+  }
+  .infoBlock__caption p{
+    font-size: 16px;
+  }
+  .infoBlock__caption span{
+    font-size: 12px;
+  }
+  .infoBlock__subBlock{
+    height: 120px;
+  }
+  footer .row > div:last-child{
+    margin-top: 40px;
+  }
+  footer{
+    padding: 50px 0;
+  }
+  .footerContacts ul li{
+    margin-bottom: 10px;
+  }
+  ul.footerMenuList li{
+    margin-bottom: 10px;
+  }
+  .footerContacts__policy{
+    font-size: 10px;
+  }
+  .footerContacts ul{
+    margin-bottom: 20px;
+  }
+  .footerContacts__contacts{
+    margin-bottom: 20px;
+  }
+  .infoSection{
+    padding: 50px 0;
+  }
+  nav{
+    top: 42px;
+  }
+}
+@media(max-width: 575px){
+  .companyDocs__link{
+    font-size: 8px;
+  }
+  .headerName{
+    display: none;
+  }
+  .headerBottom{
+    top: 68px;
+  }
+  .slideCaption{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .advantage{
+    width: calc(100% / 2);
+    padding: 20px 0;
+  }
+  .advantage:nth-child(3){
+    order:4;
+  }
+  .advantage:nth-child(6){
+    order:5;
+  }
+  .newsItem__caption{
+    padding: 10px;
+  }
+  .newsItem__text{
+    font-size: 14px;
+    min-height: 72px;
+    height: 72px;
+  }
+  .footerContacts{
+    order:3;
+    margin-top: 40px;
+  }
+  .macroBtn{
+    font-size: 14px;
+  }
+  .infoBlock__caption{
+    bottom: 10px;
+    left: 20px;
+  }
+  .infoBlock{
+    height: 120px;
+    margin-bottom: 20px;
+  }
+  .infoBlock:nth-child(2){
+    height: auto;
+    margin-top: 0;
+  }
+  .mainSlide__header{
+    font-size: 30px;
+  }
+}
+
+
+/********MODALS********/
+.modal{
+  color: #1a1a1a;
+}
+.modal-content{
+  border-radius: 0;
+}
+.modal-content{
+  padding: 50px;
+  position: relative;
+}
+.modal-dialog{
+  max-width: 470px;
+}
+.modal-header{
+  padding: 0;
+  border: none;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.modal-title{
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.modal-subtitle{
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+.modal-content .close{
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.modal-body{
+  padding: 0;
+}
+.modalForm{
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.modalForm > *{
+  width: 100%;
+}
+.formGroup{
+  padding-top: 20px;
+  position: relative;
+}
+.formGroup:first-child::before{
+  content:'Ваше имя';
+  font-family: 'museo',sans-serif;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -10px;
+}
+.formGroup:nth-child(2)::before{
+  content:'Ваш телефон';
+  font-family: 'museo',sans-serif;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -10px;
+}
+.modalForm input[type="submit"]{
+  width: 100%;
+  background: none;
+  background-color: #2c81c2;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 900;
+  height: 70px;
+  cursor: pointer;
+  margin-bottom: 25px;
+  -webkit-transition: .3s background-color ease;
+  -o-transition: .3s background-color ease;
+  transition: .3s background-color ease;
+}
+.modalForm input[type="submit"]:hover{
+  background-color: #3e95d8;
+}
+.formGroup input{
+  height: 70px;
+  background-color: #f8f8f8;
+  border: 2px solid #f8f8f8;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  -webkit-transition: .3s border-color ease;
+  -o-transition: .3s border-color ease;
+  transition: .3s border-color ease;
+}
+.formGroup input:hover{
+  border-color: #3e95d8;
+}
+.formGroup input:focus{
+  border: 2px solid #2c81c2;
+}
+.closeModal{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  background-color: #2c81c2;
+  border: none;
+  color: #fff!important;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 900;
+  height: 70px;
+  cursor: pointer;
+  -webkit-transition: .3s background-color ease;
+  -o-transition: .3s background-color ease;
+  transition: .3s background-color ease;
+}
+.closeModal:hover{
+  background-color: #3e95d8;
+}
+.modal-content .close svg{
+  width: 20px;
+  height: 20px;
+}
+.checkbox {
+	display: none;
+}
+.checkbox-custom {
+	position: relative;
+	width: 16px;
+	height: 16px;
+	border: 2px solid #2c81c2;
+}
+.checkbox-custom,
+.label {
+	display: inline-block;
+	vertical-align: middle;
+}
+.checkbox:checked + .checkbox-custom::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	bottom: 2px;
+	left: 2px;
+	background: #413548;
+	border-radius: 2px;
+}
+@media(max-width: 575px){
+  .modal-subtitle br{
+    display: none;
+  }
+  .modal-content{
+    padding: 25px;
+  }
+  span.label{
+    font-size: 10px;
+  }
 }

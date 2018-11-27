@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/hamburgers.min.css">
   <link rel="stylesheet" href="css/main.css">
   <title>assoc</title>
 </head>
@@ -36,7 +37,7 @@
               </svg>
               Реестр членов
             </a>
-            <a href="javascript: void(0);" class="signBlock__signIn">Войти</a>
+            <a href="javascript: void(0);" class="signBlock__signIn" data-toggle="modal" data-target="#callback">Войти</a>
           </div>
         </div>
         <div class="headerBottom">
@@ -44,52 +45,72 @@
             <div class="logo"><img src="img/logo1.png" alt="Логотип"></div>
             <div class="logo"><img src="img/logo2.png" alt="Логотип"></div>
           </div>
+          <button class="hamburger hamburger--collapse" type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
           <nav>
             <ul>
-              <li>Об ассоциации
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370.814 370.814">
-                  <path d="M292.92 24.848L268.781 0 77.895 185.401l190.886 185.413 24.139-24.853-165.282-160.56z"/>
-                </svg>
+              <li>
+                <a>
+                  Об ассоциации
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370.814 370.814">
+                    <path d="M292.92 24.848L268.781 0 77.895 185.401l190.886 185.413 24.139-24.853-165.282-160.56z"/>
+                  </svg>
+                </a>
                 <ul>
                   <li><a href="javascript: void(0);">Пункт1</a></li>
                   <li><a href="javascript: void(0);">Пункт2</a></li>
                   <li><a href="javascript: void(0);">Пункт3</a></li>
                 </ul>
               </li>
-              <li>Членам
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370.814 370.814">
-                  <path d="M292.92 24.848L268.781 0 77.895 185.401l190.886 185.413 24.139-24.853-165.282-160.56z"/>
-                </svg>
+              <li>
+                <a>
+                  Членам
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370.814 370.814">
+                    <path d="M292.92 24.848L268.781 0 77.895 185.401l190.886 185.413 24.139-24.853-165.282-160.56z"/>
+                  </svg>
+                </a>
                 <ul>
                   <li><a href="javascript: void(0);">Пункт1</a></li>
                   <li><a href="javascript: void(0);">Пункт2</a></li>
                   <li><a href="javascript: void(0);">Пункт3</a></li>
                 </ul>
               </li>
-              <li>Условия членства
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370.814 370.814">
-                  <path d="M292.92 24.848L268.781 0 77.895 185.401l190.886 185.413 24.139-24.853-165.282-160.56z"/>
-                </svg>
+              <li>
+                <a>
+                  Условия членства
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370.814 370.814">
+                    <path d="M292.92 24.848L268.781 0 77.895 185.401l190.886 185.413 24.139-24.853-165.282-160.56z"/>
+                  </svg>
+                </a>
                 <ul>
                   <li><a href="javascript: void(0);">Пункт1</a></li>
                   <li><a href="javascript: void(0);">Пункт2</a></li>
                   <li><a href="javascript: void(0);">Пункт3</a></li>
                 </ul>
               </li>
-              <li>Мероприятия
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370.814 370.814">
-                  <path d="M292.92 24.848L268.781 0 77.895 185.401l190.886 185.413 24.139-24.853-165.282-160.56z"/>
-                </svg>
+              <li>
+                <a>
+                  Мероприятия
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370.814 370.814">
+                    <path d="M292.92 24.848L268.781 0 77.895 185.401l190.886 185.413 24.139-24.853-165.282-160.56z"/>
+                  </svg>
+                </a>
                 <ul>
                   <li><a href="javascript: void(0);">Пункт1</a></li>
                   <li><a href="javascript: void(0);">Пункт2</a></li>
                   <li><a href="javascript: void(0);">Пункт3</a></li>
                 </ul>
               </li>
-              <li>Новости
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370.814 370.814">
-                  <path d="M292.92 24.848L268.781 0 77.895 185.401l190.886 185.413 24.139-24.853-165.282-160.56z"/>
-                </svg>
+              <li>
+                <a>
+                  Новости
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370.814 370.814">
+                    <path d="M292.92 24.848L268.781 0 77.895 185.401l190.886 185.413 24.139-24.853-165.282-160.56z"/>
+                  </svg>
+                </a>
                 <ul>
                   <li><a href="javascript: void(0);">Пункт1</a></li>
                   <li><a href="javascript: void(0);">Пункт2</a></li>
@@ -107,7 +128,7 @@
                 <div class="mainSlide">
                   <img src="img/slide1.jpg" alt="Слайдер">
                   <div class="slideCaption">
-                    <h1 class="mainSlide__header">Юридическая<br>и информационная защита</h1>
+                    <h1 class="mainSlide__header">Юридическая <br>и информационная защита</h1>
                     <p class="mainSlide__subheader">Ассоциация обеспечивает комплексную защиту своих членов</p>
                     <p class="mainSlide__description">Становясь членом Ассоциации вы получаете не только поддержку со стороны профильных ведомств, но и постоянную информационную поддержку, обучение персонала и другие преимущества</p>
                     <a href="javascript: void(0);" class="mainSlide__button">Обучение</a>
@@ -176,7 +197,7 @@
   <section class="newsSection">
     <div class="container">
       <div class="row newsRow">
-        <div class="col-xl-6">
+        <div class="col-xl-5 col-lg-6">
           <div class="newsMain">
             <img src="img/news1.jpg" alt="Новости">
             <div class="newsCaption">
@@ -185,7 +206,7 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-6 news">
+        <div class="col-xl-6 offset-xl-1 col-lg-6 news">
           <div class="news__breadcrumbs">
             <h2 class="news__header">Новости</h2>
             <a href="javascript: void(0);" class="news__allNews">Все новости
@@ -239,15 +260,15 @@
   <section class="infoSection">
     <div class="container">
       <div class="row">
-        <div class="col-xl-12 infoBlocks">
-          <div class="infoBlock">
+        <div class="infoBlocks">
+          <div class="infoBlock col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
             <img src="img/info1.jpg" alt="Семинар" class="infoBlock__img">
             <div class="infoBlock__caption">
               <p>Новый семинар</p>
               <a href="javascript: void(0);" class="btn">Подробнее</a>
             </div>
           </div>
-          <div class="infoBlock">
+          <div class="infoBlock col-xl-5 col-lg-12 col-md-12 col-sm-12 col-12">
             <a href="javascript: void(0);" class="btn macroBtn infoBlock__subBlock">
               <img src="img/user.png" alt="Участвовать">
               Станьте членом
@@ -266,7 +287,7 @@
               </div>
             </div>
           </div>
-          <div class="infoBlock">
+          <div class="infoBlock col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12">
             <img src="img/info2.jpg" alt="Семинар" class="infoBlock__img">
             <div class="infoBlock__caption">
               <p>Почему вступить -<br>это выгодно?</p>
@@ -280,7 +301,7 @@
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-xl-3 footerContacts">
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-6 footerContacts">
           <ul>
             <li><a href="javascript: void(0);">Условия членства</a></li>
             <li><a href="javascript: void(0);">Мероприятия</a></li>
@@ -292,7 +313,7 @@
           </div>
           <a href="javascript: void(0);" class="footerContacts__policy">Политика конфиденциальности</a>
         </div>
-        <div class="col-xl-3">
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-6">
           <h4>Об Ассоциации</h4>
           <ul class="footerMenuList">
             <li><a href="javascript: void(0);">Структура</a></li>
@@ -300,7 +321,7 @@
             <li><a href="javascript: void(0);">Условия</a></li>
           </ul>
         </div>
-        <div class="col-xl-3">
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-4 col-6">
           <h4>Членам</h4>
           <ul class="footerMenuList">
             <li><a href="javascript: void(0);">Пункт</a></li>
@@ -308,12 +329,67 @@
             <li><a href="javascript: void(0);">Ещё один пункт</a></li>
           </ul>
         </div>
-        <div class="col-xl-3">
+        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-10 offset-sm-1 col-6">
           <iframe src="https://www.youtube.com/embed/zUCDyq3Pbp8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </div>
   </footer>
+
+  <div class="modal fade" id="callback" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.112 31.112">
+              <path d="M31.112 1.414L29.698 0 15.556 14.142 1.414 0 0 1.414l14.142 14.142L0 29.698l1.414 1.414L15.556 16.97l14.142 14.142 1.414-1.414L16.97 15.556z"/>
+            </svg>
+          </span>
+        </button>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Название формы</h5>
+          <p class="modal-subtitle">Заполните форму и мы свяжемся <br>с Вами в кратчайшие сроки</p>
+        </div>
+        <div class="modal-body">
+          <form action="" class="modalForm">
+            <div class="formGroup">
+              <input type="text">
+            </div>
+            <div class="formGroup">
+              <input type="phone">
+            </div>
+            <input type="submit" value="Отправить">
+            <label for="agreement">
+              <input type="checkbox" class="checkbox" id="agreement" required>
+              <span class="checkbox-custom"></span>
+              <span class="label">Согласен(а) на обработку персональных данных</span>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="success" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31.112 31.112">
+              <path d="M31.112 1.414L29.698 0 15.556 14.142 1.414 0 0 1.414l14.142 14.142L0 29.698l1.414 1.414L15.556 16.97l14.142 14.142 1.414-1.414L16.97 15.556z"/>
+            </svg>
+          </span>
+        </button>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Форма отправлена</h5>
+          <p class="modal-subtitle">Спасибо что выбрали нас. Мы скоро <br>с Вами свяжемся</p>
+        </div>
+        <div class="modal-body">
+          <a class="closeModal" data-dismiss="modal" aria-label="Close">Закрыть</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 <script src="js/jquery-3.3.1.min.js"></script>

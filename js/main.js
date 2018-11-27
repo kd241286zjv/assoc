@@ -11,6 +11,18 @@ $(document).ready(function(){
         prevEl: '.swiper-button-prev-partners',
       },
       slidesPerView: 5,
-      loop: true
+      loop: true,
+      breakpoints:{
+        992:{
+          slidesPerView: 3
+        },
+        576:{
+          slidesPerView: 2
+        }
+      }
+  });
+  $('.hamburger').click(function(){
+    $(this).toggleClass('is-active');
+    $('nav').stop().fadeToggle('300');
   });
 });
