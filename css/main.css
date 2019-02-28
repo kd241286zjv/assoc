@@ -49,6 +49,9 @@ ul{
   padding: 0;
   list-style: none;
 }
+button{
+  cursor: pointer;
+}
 p{
   margin: 0;
   color: inherit;
@@ -64,7 +67,62 @@ a, a:hover, a:focus, a:active{
 }
 .headerMain{
   width: 100%;
+  padding-top: 160px;
   height: 100vh;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.headerMain__news{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 50%;
+}
+.headerMainItem{
+  height: 100%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+.headerMainItem__caption{
+  font-size: 16px;
+}
+.headerMain__newsItem .headerMainItem__text{
+  font-size: 18px;
+  line-height: 1.2;
+}
+.headerMain__newsItem.primary .headerMainItem__text{
+  font-size: 22px;
+  line-height: 1.2;
+}
+.headerMainItem__caption p{
+  background-color: #E08400;
+  padding: 4px;
+  line-height: 1;
+  display: inline-block;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+.headerMain__newsItem{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
 }
 .headerTop{
   position: absolute;
@@ -244,11 +302,12 @@ nav ul{
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
+  color: #000;
 }
 nav ul li{
   width: calc(100% / 6);
   border: 1px solid #fff;
-  background-color: rgba(0,0,0,.25);
+  background-color: #fff;
   border-left: none;
   cursor: pointer;
   position: relative;
@@ -390,7 +449,6 @@ nav ul li ul li a:hover{
 .advantage{
   height: 270px;
   width: calc(100% / 6);
-  background-color: #2c81c2;
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -403,18 +461,12 @@ nav ul li ul li a:hover{
   padding: 40px 0;
 }
 .advantage img{
-  width: 50px;
+  width: auto;
   height: 50px;
 }
 .advantage__desc{
   text-align: center;
   min-height: 63px;
-}
-.advantage:nth-child(odd) .advantage__desc{
-  opacity: .75;
-}
-.advantage:nth-child(even){
-  background-color: rgba(44,129,194,.95);
 }
 .newsSection{
   padding: 100px 0;
@@ -1208,4 +1260,118 @@ iframe{
   span.label{
     font-size: 10px;
   }
+}
+.advantagesSection{
+  background-color: #fff;
+}
+.advantagesSection h2{
+  color: #000;
+  position: relative;
+  padding-top: 40px;
+  margin: 40px 0;
+  text-align: center;
+}
+.advantagesSection h2::before{
+  position: absolute;
+  width: 80px;
+  left: calc(50% - 40px);
+  content: '';
+  height: 5px;
+  display: block;
+  background-color: #E08400;
+  top: 20px;
+}
+.sliderSectionRight{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  padding: 0 40px;
+  height: 100%;
+}
+.sliderSectionRight h3{
+  font-size: 50px;
+}
+.sliderSectionLeft{
+  position: relative;
+}
+.sliderSectionLeft .swiper-pagination{
+  right: auto;
+  left: 0px;
+  top: 40px;
+  bottom: auto;
+}
+.swiper-pagination-bullet{
+  width: 80px;
+  height: 5px;
+  background-color: #E08400;
+  margin-right: 10px;
+}
+.sliderSectionRight h3 span{
+  color: #E08400;
+}
+.mainSliderContent{
+  margin: 60px 0;
+  padding: 50px;
+  background-color: grey;
+  margin-top: 120px;
+}
+.mainSliderContent p{
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+.button{
+  background: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 20px;
+  border: 2px solid #E08400;
+}
+.informationBlock{
+  background-color: #fff;
+}
+.informationBlock img{
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+.infoSection{
+  background-color: #333;
+  padding: 50px 0;
+}
+.informationBlock{
+  color: #333;
+}
+.informationBlock p{
+  font-size: 16px;
+  line-height: 20px;
+  padding: 20px;
+  font-weight: 700;
+}
+.informationBlock .button{
+  margin: 20px;
+  color: #333;
+}
+.infoHeader{
+  margin-bottom: 40px;
+}
+.infoHeader p{
+  opacity: .75;
+}
+.infoHeader h3{
+  color: #fff;
+  font-size: 40px;
+  position: relative;
+  padding-top: 40px;
+}
+.infoHeader h3::before{
+  position: absolute;
+  left: 0;
+  top: 20px;
+  content: '';
+  height: 5px;
+  width: 200px;
+  display: block;
+  background-image: url('../img/info.png');
 }

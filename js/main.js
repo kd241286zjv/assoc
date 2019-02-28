@@ -1,7 +1,7 @@
 $(document).ready(function(){
-  var mainSwiper = new Swiper('.swiper-container-main', {
+  var mainSwiper = new Swiper('.main-swiper-container', {
     pagination: {
-      el: '.swiper-pagination-main',
+      el: '.swiper-pagination',
       clickable: true
     },
   });
